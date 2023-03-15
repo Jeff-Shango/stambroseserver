@@ -8,13 +8,16 @@ import "./style.css";
 
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Register from "./Components/register.login/Register.jsx";
  
 function App() {
   return (
     <div className="App">
+      
       <NavLinks/>
       <BrowserRouter>
         <Routes>
+          <Route path="/register" element={<Register/>}/>
           <Route path="/" element={<Dashboard/>}/>
           <Route path="/add" element={<Add/>}/>
           <Route path="/update/:id" element={<Update/>}/>
