@@ -1,0 +1,89 @@
+#body {
+    margin-top: 10rem;
+    overflow-y: scroll;
+    height: 75vh;
+}
+
+#title {
+    /* margin-bottom: 2rem; */
+    text-align: center;
+}
+
+.filterContainer {
+    position: absolute;
+    bottom: 2rem;
+    left: 20px;
+    top: 50%;
+}
+
+body {
+    background-image: url("../assets/backgroundDashboard.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+ul {
+    height: 50vh;
+    padding: 0px 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+button:active {
+    color: black;
+    background-color: red;
+}
+
+.infoShit {
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+.handleButton {
+    position: fixed;
+    left: 35%;
+    margin-right: 2rem;
+    height: 90px;
+    width: 175px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    font-size: larger;
+    font-weight: bold;
+
+    
+
+}
+
+.addButton {
+    position: fixed;
+    right: 35%;
+    height: 90px;
+    width: 175px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    font-size: larger;
+    font-weight: bold;
+}
+
+#addText {
+    color: black;
+    text-decoration: none;
+  }
+  

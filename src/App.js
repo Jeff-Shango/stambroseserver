@@ -6,12 +6,13 @@ import NotFound from "./Components/notfound/NotFound.jsx";
 import Update from "./Components/update/Update.jsx";
 import "./style.css";
 
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
  
 function App() {
   return (
     <div className="App">
-      {/* <NavLinks/> */}
+      <NavLinks/>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Dashboard/>}/>
