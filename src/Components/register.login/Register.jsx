@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Register = () => {
     const [data, setData] = useState({
-        first_name:"",
-        last_name:"",
-        email:"",
+        username:"",
         password:""
-    })
+    });
+
+    const navigate = useNavigate();
 
     const handleChange= (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
@@ -15,18 +17,28 @@ const Register = () => {
         console.log(data)
     }
 
-    const submitForm = (e) =>{
-        e.preventDefault();
-        data = {
-            username: data.username,
-            email: data.email,
-            password: data.password
+    const handleClick = async e => {
+        e.preventDefault()
+        try{
+            await axios.post("http://localhost:5000/register", data)
+            navigate("/")
+        }catch(err){
         }
     }
 
+    console.log(data);
+
+    // const submitForm = (e) =>{
+    //     e.preventDefault();
+    //     data = {
+    //         username: data.user_name,
+    //         password: data.password
+    //     }
+    // }
+    // <form onSubmit={submitForm}>
+
   return (
     <div className='main-box'>
-        <form onSubmit={submitForm}>
     <div className='row'>
         <div className="col-md-12 text-center"><h1>Register</h1></div>
     </div>
@@ -68,11 +80,11 @@ const Register = () => {
         <div className='row'>
   
             <div className="col-md-12 text-center">
-                <input type="submit" name="submit" value="Register" className='btn btn-success'/>
+                <button className="registerButton" onClick={handleClick}>Register</button>
+                {/* <input onChange={handleClick} type="submit" name="submit" value="register" className='btn btn-success'/> */}
             </div>
         </div>
         </div>
-        </form>
     </div>
   )
 }

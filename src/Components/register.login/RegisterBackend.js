@@ -1,12 +1,13 @@
-const express = require('express');
-const mysql = require('mysql2');
+import express from 'express';
+import mysql from 'mysql2';
+import cors from "cors";
 const app = express();
 
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'baltimore',
-    database: "Registration"
+    database: "Client_Server"
 });
 
 db.connect((err) => {
@@ -15,6 +16,15 @@ db.connect((err) => {
 });
 
 app.use(express.json());
+app.use(cors());
+
+app.get('/register', (req, res) => {
+    const q = "SELECT * FROM Client_Server.Registration";
+    db.query(q, (err, data) => {
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+});
 
 //  Register endpoint
 app.post('/register', (req, res) => {
@@ -26,6 +36,20 @@ app.post('/register', (req, res) => {
         console.log(result);
         res.send('User registerd');
     });
+});
+
+app.post('/register', (req, res) => {
+    const q = "INSERT INTO Client_Server.Registration (`user_name`, `password`, `email`) VALUES (?)"
+    const values = [
+        req.body.user_name,
+        req.body.password,
+        req.body.email,
+    ]
+
+    db.query(q, [values], (err, data) => {
+        if(err) return res.json(err)
+        return res.json("New User inputted!")
+    })
 });
 
 // Login endpoint 
@@ -47,6 +71,9 @@ app.post('/login', (req, res) => {
     });    
 });
 
-app.listen(5000, () => {
-    console.log('Server running on port 5000 ');
-});
+const PORT = 5000;
+
+app.listen(
+    PORT, 
+    () => console.log(`Running on ${PORT}`)
+);
