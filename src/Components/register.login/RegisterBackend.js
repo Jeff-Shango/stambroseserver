@@ -28,9 +28,9 @@ app.get('/register', (req, res) => {
 
 //  Register endpoint
 app.post('/register', (req, res) => {
-    const { username, password } = req.body;
-    const sql = 'INSERT INTO users SET ?';
-    const user = { username, password };
+    const { user_name, password, email } = req.body;
+    const sql = 'INSERT INTO Registration SET ?';
+    const user = { user_name, password, email };
     db.query(sql, user, (err, result) => {
         if (err) throw err;
         console.log(result);
@@ -53,23 +53,23 @@ app.post('/register', (req, res) => {
 });
 
 // Login endpoint 
-app.post('/login', (req, res) => {
-    const { username, password } = req.body;
-    const sql = 'SELECT * FROM users WHERE username = ?';
-    db.query(sql, [username], (err, result) => {
-        if (err) throw err;
-        if (result.length === 0) {
-            res.send('User not found');
-        } else {
-            const user = result[0];
-            if (user.password === password) {
-                res.send('Login successful');
-            } else {
-                res.send('Incorrect password');
-            }
-        }
-    });    
-});
+// app.post('/login', (req, res) => {
+//     const { user_name, password } = req.body;
+//     const sql = 'SELECT * FROM users WHERE user_name = ?';
+//     db.query(sql, [user_name], (err, result) => {
+//         if (err) throw err;
+//         if (result.length === 0) {
+//             res.send('User not found');
+//         } else {
+//             const user = result[0];
+//             if (user.password === password) {
+//                 res.send('Login successful');
+//             } else {
+//                 res.send('Incorrect password');
+//             }
+//         }
+//     });    
+// });
 
 const PORT = 5000;
 

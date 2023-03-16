@@ -5,8 +5,9 @@ import axios from 'axios';
 
 const Register = () => {
     const [data, setData] = useState({
-        username:"",
-        password:""
+        user_name:"",
+        password:"",
+        email: "",
     });
 
     const navigate = useNavigate();
@@ -45,8 +46,8 @@ const Register = () => {
         <div className='row'>
             <div className="col-md-6">Username</div>
             <div className="col-md-6">
-                <input type="text" name="username" className='form-control'
-                onChange={handleChange} value={data.username}
+                <input type="text" name="user_name" className='form-control'
+                onChange={handleChange} value={data.user_name}
                 />
             </div>
 
