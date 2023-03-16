@@ -18,8 +18,7 @@ const Register = () => {
     const submitForm = (e) =>{
         e.preventDefault();
         data = {
-            first_name: data.first_name,
-            last_name: data.last_name,
+            username: data.username,
             email: data.email,
             password: data.password
         }
@@ -32,36 +31,36 @@ const Register = () => {
         <div className="col-md-12 text-center"><h1>Register</h1></div>
     </div>
         <div className='row'>
-            <div className="col-md-6">First Name</div>
+            <div className="col-md-6">Username</div>
             <div className="col-md-6">
-                <input type="text" name="first_name" className='form-control'
-                onChange={handleChange} value={data.first_name}
+                <input type="text" name="username" className='form-control'
+                onChange={handleChange} value={data.username}
                 />
             </div>
 
             <div className='row'>
-            <div className="col-md-6">Last Name</div>
+            <div className="col-md-6">Password</div>
             <div className="col-md-6">
-                <input type="text" name="last_name" className='form-control'
-                onChange={handleChange} value={data.last_name}
+                <input type="password" name="password" className='form-control'
+                onChange={handleChange} value={data.password}
                 />
             </div>
         </div>
 
-        <div className='row'>
+        {/* <div className='row'>
             <div className="col-md-6">Email</div>
             <div className="col-md-6">
                 <input type="text" name="email" className='form-control'
                 onChange={handleChange} value={data.email}
                 />
             </div>
-        </div>
+        </div> */}
 
         <div className='row'>
-            <div className="col-md-6">Password</div>
+            <div className="col-md-6">Email</div>
             <div className="col-md-6">
-                <input type="password" name="password" className='form-control'
-                onChange={handleChange} value={data.password}
+                <input type="text" name="email" className='form-control'
+                onChange={handleChange} value={data.email}
                 />
             </div>
         </div>
