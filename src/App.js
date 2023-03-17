@@ -4,6 +4,7 @@ import Dashboard from "./Components/dashboard/Dashboard.jsx";
 import Add from "./Components/add/Add.jsx";
 import NotFound from "./Components/notfound/NotFound.jsx";
 import Update from "./Components/update/Update.jsx";
+import Login from "./Components/register.login/Login.jsx";
 import "./style.css";
 
 
@@ -17,6 +18,7 @@ function App() {
       <NavLinks/>
       <BrowserRouter>
         <Routes>
+          <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
           <Route path="/" element={<Dashboard/>}/>
           <Route path="/add" element={<Add/>}/>
