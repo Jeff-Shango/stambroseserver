@@ -38,38 +38,36 @@ app.post('/register', (req, res) => {
     });
 });
 
-app.post('/register', (req, res) => {
-    const q = "INSERT INTO Client_Server.Registration (`user_name`, `password`, `email`) VALUES (?)"
-    const values = [
-        req.body.user_name,
-        req.body.password,
-        req.body.email,
-    ]
 
-    db.query(q, [values], (err, data) => {
+// LOGIN
+app.get('/login', (req, res) => {
+    const q = "SELECT * FROM Registration ";
+    db.query(q, (err, data) => {
         if(err) return res.json(err)
-        return res.json("New User inputted!")
+        return res.json(data)
     })
-});
+})
+
 
 // Login endpoint 
-// app.post('/login', (req, res) => {
-//     const { user_name, password } = req.body;
-//     const sql = 'SELECT * FROM users WHERE user_name = ?';
-//     db.query(sql, [user_name], (err, result) => {
-//         if (err) throw err;
-//         if (result.length === 0) {
-//             res.send('User not found');
-//         } else {
-//             const user = result[0];
-//             if (user.password === password) {
-//                 res.send('Login successful');
-//             } else {
-//                 res.send('Incorrect password');
-//             }
-//         }
-//     });    
-// });
+app.post('/login', (req, res) => {
+    const { user_name, password } = req.body;
+    const sql = 'SELECT * FROM Registration WHERE user_name = ?';
+    db.query(sql, [user_name], (err, result) => {
+        if (err) throw err;
+        if (result.length === 0) {
+            res.send('User not found');
+        } else {
+            const user = result[0];
+            if (user.password === password) {
+                res.send('Login successful');
+            } else {
+                res.send('Incorrect password');
+            }
+        }
+    });    
+});
+
 
 const PORT = 5000;
 

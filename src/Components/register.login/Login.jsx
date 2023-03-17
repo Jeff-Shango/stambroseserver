@@ -15,25 +15,29 @@ const Login = () => {
         setData({ ...data, [e.target.name]: e.target.value });
     }
 
-    const loginList = async e => {
+
+    const handleLogin = async (e) => {
         e.preventDefault()
         try {
-            await axios.get(data.user_name, data.password)
-            console.log(data.user_name, data.password);
-        }catch (err){
+            const res = await axios.post('/login', data)
+            if (res.data.user_name === data.user_name) {
+                navigate('/');
+            } else {
+                console.log('Login Failed');
+            }
+        } catch (err){
+            console.log(err);
         }
     }
 
-    // const handleLogin = (e) => {
-    //     const 
-    // }
-
     console.log(data)
     return (
-        <div className='main-box' onLoad={loginList}>
+        <div className='main-box'>
         <div className='row'>
             <div className="col-md-12 text-center"><h1>Log-In</h1></div>
         </div>
+
+        <form onSubmit={handleLogin}>
             <div className='row'>
                 <div className="col-md-6">Username</div>
                 <div className="col-md-6">
@@ -63,11 +67,12 @@ const Login = () => {
             <div className='row'>
       
                 <div className="col-md-12 text-center">
-                    <button className="registerButton">Sign-In</button>
                     <input type="submit" name="submit" value="login" className='btn btn-success'/>
+
                 </div>
             </div>
             </div>
+            </form>
         </div>
       )
 }
