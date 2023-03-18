@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+
+
 
 const Login = () => {
     const [data, setData] = useState({
         user_name: "",
         password: "",
     });
+
+    useEffect(() => {
+        const getUsers = async () => {
+          try{
+            const res = await axios.get("http://localhost:5000/register")
+            console.log(res.data);
+            console.log("connecting to shit");
+          }catch(err){
+            console.log(err)
+          }
+        }
+        getUsers()
+      }, []);
 
     // ensure that you are able to use the register data to make the log in 
     const navigate = useNavigate();
@@ -19,11 +34,11 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('/login', data)
+            const res = await axios.get('/login', data)
             if (res.data.user_name === data.user_name) {
                 navigate('/');
             } else {
-                console.log('Login Failed');
+                alert('Login Failed');
             }
         } catch (err){
             console.log(err);
@@ -37,7 +52,7 @@ const Login = () => {
             <div className="col-md-12 text-center"><h1>Log-In</h1></div>
         </div>
 
-        <form onSubmit={handleLogin}>
+        <form>
             <div className='row'>
                 <div className="col-md-6">Username</div>
                 <div className="col-md-6">
@@ -67,7 +82,7 @@ const Login = () => {
             <div className='row'>
       
                 <div className="col-md-12 text-center">
-                    <input type="submit" name="submit" value="login" className='btn btn-success'/>
+                    <button type="submit" name="submit" value="login" className='btn btn-success' onSubmit={handleLogin}>login</button>
 
                 </div>
             </div>

@@ -29,8 +29,8 @@ const Dashboard = () => {
   const handleDelete = async (id)=> {
     try{
       await axios.delete("http://localhost:8000/list/"+id)
-      setList(list.filter(item => item.id != id));
-      setFilteredData(filteredData.filter(item => item.id != id));
+      setList(list.filter(item => item.id !== id));
+      setFilteredData(filteredData.filter(item => item.id !== id));
       window.location.reload()
     }catch(err){
       console.log(err)
