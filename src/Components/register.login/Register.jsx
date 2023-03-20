@@ -45,35 +45,26 @@ const Register = () => {
         <div className="col-md-12 text-center"><h1>Register</h1></div>
     </div>
         <div className='row'>
-            <div className="col-md-6">Username</div>
+            <div id='inputTitle' className="col-md-6">Username</div>
             <div className="col-md-6">
-                <input type="text" name="user_name" className='form-control'
+                <input id='registerInput' type="text" name="user_name" className='form-control'
                 onChange={handleChange} value={data.user_name}
                 />
             </div>
 
             <div className='row'>
-            <div className="col-md-6">Password</div>
+            <div id='inputTitle' className="col-md-6">Password</div>
             <div className="col-md-6">
-                <input type="password" name="password" className='form-control'
+                <input id='registerInput' type="password" name="password" className='form-control'
                 onChange={handleChange} value={data.password}
                 />
             </div>
         </div>
 
-        {/* <div className='row'>
-            <div className="col-md-6">Email</div>
-            <div className="col-md-6">
-                <input type="text" name="email" className='form-control'
-                onChange={handleChange} value={data.email}
-                />
-            </div>
-        </div> */}
-
         <div className='row'>
-            <div className="col-md-6">Email</div>
+            <div id='inputTitle' className="col-md-6">Email</div>
             <div className="col-md-6">
-                <input type="text" name="email" className='form-control'
+                <input id='registerInput' type="text" name="email" className='form-control'
                 onChange={handleChange} value={data.email}
                 />
             </div>

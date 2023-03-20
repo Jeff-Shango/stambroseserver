@@ -1,4 +1,43 @@
-.main-box {
-    border: 2px solid red;
+.registerButton {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    height: 3.5rem;
+    width: 5rem;
 }
 
+.registerButton:hover {
+    font-weight: bolder;
+    background: -moz-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -webkit-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -o-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -ms-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+}
+
+#registerInput {
+    text-align: center;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background-color: darkgray;
+    color: black;
+    font-weight: bold;
+    width: fit-content;
+}
+
+#inputTitle {
+    width: 10rem;
+    margin-left: 5rem;
+    border-bottom: 2px solid black;
+    border-left: 1px solid black;
+}
