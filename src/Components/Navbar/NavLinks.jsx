@@ -10,7 +10,7 @@ const NavLinks = () => {
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Navbar.Text className='navbarSignin'>
-            Signed in as: <a href="#login">Jeff Bozier</a>
+            Signed in as: <a href="/login">Jeff Bozier</a>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>

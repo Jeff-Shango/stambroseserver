@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import "./register.css";
 
 const Register = () => {
     const [data, setData] = useState({
@@ -22,7 +23,7 @@ const Register = () => {
         e.preventDefault()
         try{
             await axios.post("http://localhost:5000/register", data)
-            navigate("/")
+            navigate("/login")
         }catch(err){
         }
     }

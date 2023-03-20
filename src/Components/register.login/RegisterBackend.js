@@ -41,7 +41,7 @@ app.post('/register', (req, res) => {
 
 // LOGIN
 app.get('/login', (req, res) => {
-    const q = "SELECT * FROM Registration ";
+    const q = "SELECT * FROM Registration";
     db.query(q, (err, data) => {
         if(err) return res.json(err)
         return res.json(data)
@@ -67,6 +67,7 @@ app.post('/login', (req, res) => {
         }
     });    
 });
+
 
 
 const PORT = 5000;
