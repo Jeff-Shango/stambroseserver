@@ -59,7 +59,7 @@ const Login = (props) => {
             <input onChange={handleChange} value={data.password}  name="password" type="password" placeholder='Enter your Password' /> 
             <button type='submit' id='loginButton' className='btn'>Log In</button>
             </form>
-            <a id='registerButton' className='btn' href="/Register">Don't have an account?</a>
+            <a id='registerButton' className='btn' href="/register">Don't have an account?</a>
         </div>
       )
 }
