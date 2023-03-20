@@ -36,7 +36,7 @@ const Login = (props) => {
         try {
             const res = await axios.post('http://localhost:5000/login', data);
             if ( res.data === 'Login successful') {
-                navigate('/');
+                navigate('/dashboard');
             } else {
                     alert("Incorrect Password");
             }

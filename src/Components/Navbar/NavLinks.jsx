@@ -20,7 +20,7 @@ const NavLinks = () => {
         <Navbar.Collapse>
           <Navbar.Text className='navbarSignin'>
             {pathName === '/login' || pathName === '/register' ? "" : (
-            <a href='/login'>
+            <a href='/'>
               Logout
             </a>)}
           </Navbar.Text>
