@@ -2,11 +2,13 @@
     margin-top: 10rem;
     overflow-y: scroll;
     height: 75vh;
+    overflow-x: visible;
 }
 
 #title {
     /* margin-bottom: 2rem; */
     text-align: center;
+    position: relative;
 }
 
 .filterContainer {
@@ -31,9 +33,8 @@ body {
 
 ul {
     height: 50vh;
-    padding: 0px 100px;
-    align-items: center;
-    justify-content: center;
+    padding: 0px 100px;   
+    position: relative;    
 }
 
 button:active {
@@ -42,6 +43,8 @@ button:active {
 }
 
 .infoShit {
+    position: relative;
+    left: 10%;
     border: 2px solid black;
     border-radius: 12px;
     margin-top: 20px;
