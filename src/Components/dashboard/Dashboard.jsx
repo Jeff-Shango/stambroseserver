@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import "./dashboard.css";
 
 
@@ -31,7 +31,8 @@ const Dashboard = () => {
       await axios.delete("http://localhost:8000/list/"+id)
       setList(list.filter(item => item.id !== id));
       setFilteredData(filteredData.filter(item => item.id !== id));
-      window.location.reload()
+      // window.location.reload()
+      Navigate("/dashboard")
     }catch(err){
       console.log(err)
     }
