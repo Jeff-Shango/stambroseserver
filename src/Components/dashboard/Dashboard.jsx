@@ -37,9 +37,21 @@ const Dashboard = () => {
     }
   }
 
-  const handleFilterChange = (e) => {
+  const handleFilterNameChange = (e) => {
     const filter = e.target.value.toLowerCase();
     const filtered = list.filter(item => item.clientName.toLowerCase().includes(filter));
+    setFilteredData(filtered);
+  }
+
+  const handleFilterSOWChange = (e) => {
+    const filter = e.target.value.toLowerCase();
+    const filtered = list.filter(item => item.SOW.toLowerCase().includes(filter));
+    setFilteredData(filtered);
+  }
+
+  const handleFilterGrantChange = (e) => {
+    const filter = e.target.value.toLowerCase();
+    const filtered = list.filter(item => item.grant.toLowerCase().includes(filter));
     setFilteredData(filtered);
   }
 
@@ -47,7 +59,9 @@ const Dashboard = () => {
     <div id='body'>
       <h1 id='title'>St. Ambrose</h1>
       <div className="filterContainer">
-        <input type="text" placeholder='Filter by Client Name' onChange={handleFilterChange} />
+        <input type="text" placeholder='Filter by Client Name' onChange={handleFilterNameChange} />
+        <input type="text" placeholder='Filter by SOW' onChange={handleFilterSOWChange} />
+        <input type="text" placeholder='Filter by Grant' onChange={handleFilterGrantChange} />
       </div>
     <button onClick={handleButtonClick} className="handleButton"
       style={{
