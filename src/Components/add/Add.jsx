@@ -19,7 +19,7 @@ const Add = () => {
         e.preventDefault()
         try{
             await axios.post("http://localhost:8000/list", info)
-            navigate("/")
+            navigate("/dashboard")
         }catch(err){
             console.log(err)
         }

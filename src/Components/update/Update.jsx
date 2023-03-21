@@ -22,7 +22,7 @@ const Update = () => {
         e.preventDefault()
         try{
             await axios.put("http://localhost:8000/list/"+ listId, info)
-            navigate("/")
+            navigate("/dashboard")
         }catch(err){
             console.log(err)
         }
