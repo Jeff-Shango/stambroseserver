@@ -43,7 +43,26 @@ button:active {
 
 .infoShit {
     border: 2px solid black;
+    border-radius: 12px;
     margin-top: 20px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+}
+
+.infoShit:hover {
+    font-weight: bolder;
+    background: -moz-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -webkit-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -o-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -ms-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
 }
 
 .handleButton {
@@ -88,8 +107,31 @@ button:active {
     font-weight: bold;
 }
 
+.addButton:hover, .handleButton:hover {
+    font-weight: bolder;
+    background: -moz-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -webkit-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -o-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -ms-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+}
+
 #addText {
     color: black;
     text-decoration: none;
   }
-  
+
+.delete, .update {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    width: 10rem;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    font-weight: bolder;
+}
