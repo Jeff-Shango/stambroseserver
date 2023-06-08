@@ -38,6 +38,14 @@ app.get('/list', (req, res) => {
     })
 });
 
+app.get('/register', (req, res) => {
+    const q = "SELECT * FROM Client_Server.loginInformation";
+    db.query(q, (err, data) => {
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+});
+
 app.delete("/list/:id", (req, res) => {
     const infoId = req.params.id;
     const q = "DELETE FROM Client_Server.clientInformation WHERE id = ?"
@@ -63,9 +71,15 @@ app.put("/list/:id", (req, res) => {
     })
 });
 
-const PORT = 8000;
+const clientPORT = 8000;
+const loginPORT = 5000;
 
 app.listen(
-    PORT, 
-    () => console.log(`Running on ${PORT}`)
+    clientPORT, 
+    () => console.log(`Running on ${clientPORT}`)
+);
+
+app.listen(
+    loginPORT,
+    () => console.log(`Login server running on ${loginPORT}`)
 );

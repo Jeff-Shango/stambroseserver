@@ -22,7 +22,7 @@ const Register = () => {
     const handleClick = async e => {
         e.preventDefault()
         try{
-            await axios.post("http://localhost:5000/register", data)
+            await axios.post("/register", data)
             navigate("/login")
         }catch(err){
         }
