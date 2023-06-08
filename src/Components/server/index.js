@@ -28,6 +28,20 @@ app.post("/list", (req, res) => {
     })
 });
 
+app.post("/register", (req, res) => {
+    const q = "INSERT INTO Client_Server.loginInformation (`user_name`, `password`, `email`) VALUES (?)"
+    const values = [
+        req.body.user_name,
+        req.body.password,
+        req.body.email,
+    ]
+
+    db.query(q,[values], (err, data) => {
+        if(err) return res.json(err)
+        return res.json("login info added")
+    })
+});
+
 
 
 app.get('/list', (req, res) => {
