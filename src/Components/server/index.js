@@ -6,16 +6,53 @@ const app = express();
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "baltimore",
+    password: "Woodward20!",
     database: "Client_Server"
 })
 
 app.use(express.json())
 app.use(cors())
 
+app.post("/login", (req, res) => {
+    const { user_name, password } = req.body;
+    const q = "SELECT * FROM Client_Server.loginInformation WHERE user_name = ? AND password = ?";
+    const values = [user_name, password];
+  
+    db.query(q, values, (err, data) => {
+      if (err) {
+        return res.json(err);
+      }
+  
+      if (data.length > 0) {
+        return res.json({ message: "Login successful" });
+      } else {
+        return res.json({ message: "Incorrect credentials" });
+      }
+    });
+  });
+  
+
+// app.post("/login", (req, res) => {
+//     const { user_name, password } = req.body;
+//     const q = "SELECT * FROM Client_Server.loginInformation WHERE user_name = ? AND password = ?";
+//     const values = [user_name, password];
+  
+//     db.query(q, values, (err, data) => {
+//       if (err) {
+//         return res.json(err);
+//       }
+  
+//       if (data.length > 0) {
+//         return res.json({ message: "Login successful" });
+//       } else {
+//         return res.json({ message: "Incorrect credentials" });
+//       }
+//     });
+//   });
+  
 
 app.post("/list", (req, res) => {
-    const q = "INSERT INTO Client_Server.clientInformation (`clientName`, `SOW`, `grant`) VALUES (?)"
+    const q = "INSERT INTO Client_Server.clientInformation (`clientName`, `SOW`, `grant`) VALUES (?, ?, ?)"
     const values = [
         req.body.clientName,
         req.body.SOW,

@@ -15,7 +15,7 @@ const Login = (props) => {
     useEffect(() => {
         const getUsers = async () => {
           try{
-            const res = await axios.get("http://localhost:5000/login")
+            const res = await axios.get("/register")
             console.log(res.data);
             console.log("connecting to shit");
           }catch(err){
@@ -30,20 +30,34 @@ const Login = (props) => {
         setData({ ...data, [e.target.name]: e.target.value });
     }
 
-
     const handleLogin = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/login', data);
-            if ( res.data === 'Login successful') {
-                navigate('/dashboard');
-            } else {
-                    alert("Incorrect Password");
-            }
-        } catch (err){
-            console.log(err);
+          const res = await axios.post('http://localhost:5000/login', data);
+          if (res.data.message === 'Login successful') {
+            navigate('/dashboard');
+          } else {
+            alert('Incorrect credentials');
+          }
+        } catch (err) {
+          console.log(err);
         }
-    }
+      };
+      
+
+    // const handleLogin = async (e) => {
+    //     e.preventDefault()
+    //     try {
+    //         const res = await axios.post('/register', data);
+    //         if ( res.data === 'Login successful') {
+    //             navigate('/dashboard');
+    //         } else {
+    //                 alert("Incorrect Password");
+    //         }
+    //     } catch (err){
+    //         console.log(err);
+    //     }
+    // }
 
     console.log(data);
     return (
