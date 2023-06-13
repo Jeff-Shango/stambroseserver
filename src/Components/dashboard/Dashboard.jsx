@@ -11,7 +11,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchList = async () => {
       try{
-        const res = await axios.get("http://localhost:8000/list")
+        const res = await axios.get("/list")
         setList(res.data);
         setFilteredData(res.data);
         console.log(res.data);
@@ -28,7 +28,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id)=> {
     try{
-      await axios.delete("http://localhost:8000/list/"+id)
+      await axios.delete("/list/"+id)
       setList(list.filter(item => item.id !== id));
       setFilteredData(filteredData.filter(item => item.id !== id));
       // window.location.reload()

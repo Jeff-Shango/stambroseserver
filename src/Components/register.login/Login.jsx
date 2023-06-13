@@ -33,7 +33,7 @@ const Login = (props) => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-          const res = await axios.post('http://localhost:5000/login', data);
+          const res = await axios.post('/login', data);
           if (res.data.message === 'Login successful') {
             navigate('/dashboard');
           } else {

@@ -18,7 +18,7 @@ const Add = () => {
     const handleClick = async e => {
         e.preventDefault()
         try{
-            await axios.post("http://localhost:8000/list", info)
+            await axios.post("/list", info)
             navigate("/dashboard")
         }catch(err){
             console.log(err)
