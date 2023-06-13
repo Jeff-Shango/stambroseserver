@@ -1,7 +1,11 @@
+/* laptop devices */
+@media only screen and (max-width: 1024px)
+{
 .main-box {
     position: relative;
     top: 10vh;
     text-align: center;
+    border: 2px solid black;
 }
 
 #loginButton, #registerButton {
@@ -48,4 +52,120 @@ input {
     background-color: darkgray;
     color: black;
     font-weight: bold;
+}
+}
+
+/* tablet devices */
+@media only screen and (max-width: 768px)
+{
+
+.main-box {
+    position: relative;
+    top: 10vh;
+    text-align: center;
+    border: 2px solid black;
+}
+
+#loginButton, #registerButton {
+    height: 4rem;
+    width: 10rem;
+    margin-bottom: 2rem;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+}
+
+#loginButton {
+    margin-top: 2rem;
+}
+
+#loginButton:hover, #registerButton:hover {
+    font-weight: bolder;
+    background: -moz-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -webkit-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -o-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -ms-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+  }
+  
+
+input, label {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: bolder;
+    font-size: 21px;
+}
+
+input {
+    text-align: center;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background-color: darkgray;
+    color: black;
+    font-weight: bold;
+}
+}
+
+/* mobile devices */
+@media only screen and (max-width: 600px)
+{
+
+.main-box {
+    top: 20vh;
+    text-align: center;
+    border: 2px solid black;
+}
+
+#loginButton, #registerButton {
+    height: 4rem;
+    width: 10rem;
+    margin-bottom: 2rem;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+}
+
+#loginButton {
+    margin-top: 2rem;
+}
+
+#loginButton:hover, #registerButton:hover {
+    font-weight: bolder;
+    background: -moz-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -webkit-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -o-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -ms-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+  }
+  
+
+input, label {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-weight: bolder;
+    font-size: 21px;
+}
+
+input {
+    text-align: center;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background-color: darkgray;
+    color: black;
+    font-weight: bold;
+}
 }
