@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { BrowserRouter, useNavigate } from 'react-router-dom';
 import "./login.css"
 
 
@@ -61,6 +61,7 @@ const Login = (props) => {
 
     console.log(data);
     return (
+      <BrowserRouter>
         <div className='main-box'>
         <div className='row'>
             <div className="col-md-12 text-center"><h1>Log-In</h1></div>
@@ -82,6 +83,7 @@ const Login = (props) => {
             </form>
             <a id='registerButton' className='btn' href="/register">Don't have an account?</a>
         </div>
+        </BrowserRouter>
       )
 }
 
