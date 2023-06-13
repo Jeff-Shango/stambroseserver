@@ -66,6 +66,13 @@ const Login = (props) => {
             <div className="col-md-12 text-center"><h1>Log-In</h1></div>
         </div>
 
+      <div id="testInputContainer">
+        <p id="testDescription">
+          Use the provided information to login
+        </p>
+        <p id="testContent">Login: test</p>
+        <p id="testContent">Password: password</p>
+      </div>
         <form onSubmit={handleLogin}>
             <label htmlFor='login'>Login ID</label>
             <input onChange={handleChange} value={data.user_name} name="user_name"type="text" placeholder='Enter your Login' />

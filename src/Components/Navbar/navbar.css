@@ -1,3 +1,50 @@
+/* desktop devices */
+
+@media only screen and (max-width: 1024px){
+.navbarContainer {
+
+    width: var(--container-width-lg);
+    margin: auto;
+}
+
+
+.navbarSignin {
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.navbarSignin > a {
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+}
+
+#logoBrand {
+    height: 20vh;
+}
+}
+
+/* tablet devices */
+
+@media only screen and (max-width: 768px){
+
+.navbarContainer{
+    width: var(--container-width-sm);
+    margin: auto;}
 /* .navbarContainer {
     border: 2px solid black;
     width: 100%;
@@ -9,14 +56,70 @@
 } */
 
 
-.navbarSignin {
-    position: absolute;
-    right: 0;
+/* .navbarSignin {
     padding-right: 20px;
     font-size: larger;
     font-weight: bold;
+    color: black;
+} */
+
+.navbarSignin > a {
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
 }
 
 #logoBrand {
     height: 20vh;
+}
+}
+
+/* small devices */
+
+@media only screen and (max-width: 600px){
+
+.navbarContainer {
+    width: var(--container-width-sm);
+    margin: auto;
+}
+
+
+/* .navbarSignin {
+    padding-right: 20px;
+    font-size: larger;
+    font-weight: bold;
+    color: black;
+} */
+
+.navbarSignin > a {
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 12px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+}
+
+#logoBrand {
+    height: 20vh;
+}
 }

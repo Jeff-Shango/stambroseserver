@@ -1,3 +1,5 @@
+/* laptop devices */
+@media only screen and (max-width: 1024px){
 #body {
     margin-top: 10rem;
     overflow-y: scroll;
@@ -12,10 +14,6 @@
 }
 
 .filterContainer {
-    position: absolute;
-    bottom: 2rem;
-    left: 20px;
-    top: 50%;
     height: fit-content;
     width: 20em;
 }
@@ -43,8 +41,6 @@ button:active {
 }
 
 .infoShit {
-    position: relative;
-    left: 10%;
     border: 2px solid black;
     border-radius: 12px;
     margin-top: 20px;
@@ -69,8 +65,6 @@ button:active {
 }
 
 .handleButton {
-    position: fixed;
-    left: 35%;
     margin-right: 2rem;
     height: 90px;
     width: 175px;
@@ -92,8 +86,6 @@ button:active {
 }
 
 .addButton {
-    position: fixed;
-    right: 35%;
     height: 90px;
     width: 175px;
     border-radius: 12px;
@@ -137,4 +129,293 @@ button:active {
     background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
     background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
     font-weight: bolder;
+}
+}
+
+/* tablet devices */
+@media only screen and (max-width: 768px){
+
+#body {
+    margin-top: 10rem;
+    overflow-y: scroll;
+    height: fit-content;
+}
+
+#title {
+    /* margin-bottom: 2rem; */
+    text-align: center;
+    position: relative;
+}
+
+.filterContainer {
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.filterContainer > input {
+    margin-bottom: 1.5rem;
+}
+
+body {
+    background-image: url("../assets/backgroundDashboard.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: fit-content;
+
+}
+
+ul {
+    border: 1px solid black;
+    height: 16rem;
+    overflow-y: scroll;
+    padding: 0px 100px;   
+    position: relative;    
+}
+
+button:active {
+    color: black;
+    background-color: red;
+}
+
+.infoShit {
+    border-radius: 12px;
+    margin-top: 20px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+}
+
+.infoShit:hover {
+    font-weight: bolder;
+    background: -moz-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -webkit-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -o-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -ms-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+}
+
+.handleButton {
+    height: 90px;
+    width: 175px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    font-size: larger;
+    font-weight: bold;
+
+    
+
+}
+
+.addButton {
+    height: 90px;
+    width: fit-content;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    font-size: larger;
+    font-weight: bold;
+}
+
+.addButton:hover, .handleButton:hover {
+    font-weight: bolder;
+    background: -moz-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -webkit-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -o-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -ms-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+}
+
+#addText {
+    color: black;
+    text-decoration: none;
+  }
+
+.delete, .update {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    width: 10rem;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    font-weight: bolder;
+}
+}
+
+/* mobile devices */
+@media only screen and (max-width: 600px){
+
+#body {
+    margin-top: 10rem;
+    overflow-y: scroll;
+    height: fit-content;
+}
+
+#title {
+    /* margin-bottom: 2rem; */
+    text-align: center;
+    position: relative;
+}
+
+.filterContainer {
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.filterContainer > input {
+    margin-bottom: 1.5rem;
+}
+
+body {
+    background-image: url("../assets/backgroundDashboard.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: fit-content;
+
+}
+
+ul {
+    border: 1px solid black;
+    height: 16rem;
+    overflow-y: scroll;
+    padding: 0px 100px;   
+    position: relative;    
+}
+
+ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+  ul::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+
+  }
+
+button:active {
+    color: black;
+    background-color: red;
+}
+
+.infoShit {
+    border-radius: 12px;
+    margin-top: 20px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+}
+
+.infoShit:hover {
+    font-weight: bolder;
+    background: -moz-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -webkit-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -o-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -ms-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+}
+
+.handleButton {
+    height: 90px;
+    width: 175px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    font-size: larger;
+    font-weight: bold;
+
+    
+
+}
+
+.addButton {
+    height: 90px;
+    width: fit-content;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    font-size: larger;
+    font-weight: bold;
+}
+
+.addButton:hover, .handleButton:hover {
+    font-weight: bolder;
+    background: -moz-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -webkit-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -o-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: -ms-radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+    background: radial-gradient(circle at 98% 100%, #CCCC00 0%, #58598C 1%, #B1B1B1 100%);
+}
+
+#addText {
+    color: black;
+    text-decoration: none;
+  }
+
+.delete, .update {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    width: 10rem;
+    background:-moz-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-webkit-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-o-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:-ms-radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    background:radial-gradient(circle at 98% 100%, #FFFF00 0%, #8384FF 1%, #E3E3E3 100%);
+    font-weight: bolder;
+}
 }

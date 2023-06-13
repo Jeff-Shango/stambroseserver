@@ -64,12 +64,9 @@ const Dashboard = () => {
         <input type="text" placeholder='Filter by SOW' onChange={handleFilterSOWChange} />
         <input type="text" placeholder='Filter by Grant' onChange={handleFilterGrantChange} />
       </div>
-    <button onClick={handleButtonClick} className="handleButton"
-      style={{
-        position: 'absolute',
-        top: showData ? 175 : 375,
-        left: showData ? 90 : 400,
-        transition: '1s ease-in-out all'}}>
+    <Link id='addText' to="/add" target='_self'><button className='addButton'>
+      Add new info</button></Link>
+    <button onClick={handleButtonClick} className="handleButton">
       {showData ? 'Hide list info' : 'Show list info'}
     </button>
       <div className='info'>
@@ -87,12 +84,6 @@ const Dashboard = () => {
       </ul>
      )} 
     </div>
-    <Link id='addText' to="/add" target='_self'><button className='addButton' style={{
-        position: 'absolute',
-        top: showData ? 175 : 375,
-        right: showData ? 90 : 450,
-        transition: '1s ease-in-out all'}}>
-      Add new info</button></Link>
     </div>
   )
 }
